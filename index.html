@@ -73,13 +73,7 @@
   <body>
     <div class="topBar">DC Networks</div>
     
-    <div class="containerW">
-      city:<h2 id="author">Author</h2>
-      <div class="content">
-        temp:<h1 id="temp">content</h1>                          
-      </div>
-      weather:<h3 id="climate">Cloudy</h3>
-      </div>
+    
     <div id="sideNav" class = "sidenav">
       <a href="javascript:void" class="closebtn" onclick="closeNav()">&times; </a>
       <a href="#">About</a>
@@ -88,6 +82,14 @@
     </div>
     <div id="main">
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    </div>
+    
+    <div class="containerW">
+      Author:<h2 id="author">Lu</h2>
+      <div class="content">
+        Title:<h1 id="title">No news</h1>                          
+      </div>
+      Content:<h3 id="content">News report</h3>
     </div>
     
     <script>
@@ -104,6 +106,8 @@
       newsAPI();
       
       function updateD(data){
+        var CNNsource = 3;
+        
         var author = data.articles[0].author;
         var title = data.articles[0].title;
         var description =  data.articles[0].description;
@@ -112,7 +116,8 @@
         var publishedAt =  data.articles[0].publishedAt;
         var content =  data.articles[0].content;
         
-        $('#city').html(title);
+        $('#title').html(title);
+        $('#author').html(author);
         
       }
       
