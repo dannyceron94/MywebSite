@@ -20,7 +20,7 @@
         padding: 10px 10px;
         font-size: 40px;
         Background-color:#355EFF;
-        color:white;;
+        color:white;
       }
 
       .sidenav{
@@ -72,6 +72,14 @@
   
   <body>
     <div class="topBar">DC Networks</div>
+    
+    <div class="containerW">
+      city:<h2 id="author">Author</h2>
+      <div class="content">
+        temp:<h1 id="temp">content</h1>                          
+      </div>
+      weather:<h3 id="climate">Cloudy</h3>
+      </div>
     <div id="sideNav" class = "sidenav">
       <a href="javascript:void" class="closebtn" onclick="closeNav()">&times; </a>
       <a href="#">About</a>
@@ -83,6 +91,31 @@
     </div>
     
     <script>
+      
+      function newsAPI(){
+        var URL = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=1d9577bfcc30424fabc3c9929392d1ae'
+        
+        $.getJSON(URL,function(data){
+                  console.log(data);
+        updateD(data);
+                  }) 
+      }
+      
+      newsAPI();
+      
+      function updateD(data){
+        var author = data.articles[0].author;
+        var title = data.articles[0].title;
+        var description =  data.articles[0].description;
+        var url =  data.articles[0].url;
+        var urlToImage =  data.articles[0].urlToImage;
+        var publishedAt =  data.articles[0].publishedAt;
+        var content =  data.articles[0].content;
+        
+        $('#city').html(title);
+        
+      }
+      
       function openNav(){
         document.getElementById("sideNav").style.width = "200px";
         document.getElementById("main").style.marginLeft = "200px";
@@ -93,6 +126,8 @@
         document.getElementById("main").style.marginLeft = "0";
         document.body.style.backgroundColor = "white";
       }
+      
+      
     </script>
     
   </body>
