@@ -84,12 +84,16 @@
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
     </div>
     
-    <div class="containerW">
-      Author:<h2 id="author">Lu</h2>
-      <div class="content">
-        Title:<h1 id="title">No news</h1>                          
-      </div>
-      Content:<h3 id="content">News report</h3>
+    <div class="container-fluid">
+      <div class = "row">
+        <div class = "col-ms-5">
+          Title:<h1 id="title">No news</h1>
+          Author:<h2 id="author">Lu</h2>
+          Data:<h3 id="publishedAt">released date</h3>
+          despcription:<h3 id="description">description report</h3>
+          Content:<h3 id="content">News report</h3>
+         </div>
+       </div>
     </div>
     
     <script>
@@ -118,6 +122,10 @@
         
         $('#title').html(title);
         $('#author').html(author);
+        $('#publishedAt').html(publishedAt);
+        $('#description').html(description);
+        $('#content').html(content);
+        
         
       }
       
