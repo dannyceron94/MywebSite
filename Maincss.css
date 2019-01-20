@@ -1,1 +1,8 @@
+.gray-b{
+  background-color: gray;
+}
 
+.transBox{
+  opacity: .5;
+  filter: alpha(opacity=30);
+}
