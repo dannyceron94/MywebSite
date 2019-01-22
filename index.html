@@ -99,13 +99,14 @@
           
         </div><!--end of col 1-row 1-->
         <div class="col-4">col 2</div>
-        <div class = "col-4" >
-          <div class = "transBox gray-b">
+        <div class = "col-4 transBox">
+          <div class = "gray-b">
             <h1>Top news Spot</h1>
             Title:<h3 id="title">No news</h3>
             Author:<h3 id="author">Lu</h3>
             Data:<h4 id="publishedAt">released date</h4>
             despcription:<h4 id="description">description report</h4>
+            <img id="newsImg"/>
             Content:<h4 id="content">News report</h4>
            </div>
          </div>
@@ -141,6 +142,7 @@
         $('#author').html(author);
         $('#publishedAt').html(publishedAt);
         $('#description').html(description);
+        $('#newsImg').attr('src',urlToImage);
         $('#content').html(content);
         
         
