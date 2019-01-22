@@ -106,7 +106,7 @@
             Author:<h3 id="author">Lu</h3>
             Data:<h4 id="publishedAt">released date</h4>
             despcription:<h4 id="description">description report</h4>
-            <img id="newsImg"/>
+            <img id="newsImg" width="200" height="200">
             Content:<h4 id="content">News report</h4>
            </div>
          </div>
@@ -134,7 +134,7 @@
         var title = data.articles[0].title;
         var description =  data.articles[0].description;
         var url =  data.articles[0].url;
-        var urlToImage =  data.articles[0].urlToImage width: 200px; height: 100px;
+        var urlToImage =  data.articles[0].urlToImage;
         var publishedAt =  data.articles[0].publishedAt;
         var content =  data.articles[0].content;
         
@@ -142,7 +142,7 @@
         $('#author').html(author);
         $('#publishedAt').html(publishedAt);
         $('#description').html(description);
-        $('#newsImg').attr('src',urlToImage);
+        $('#newsImg').attr('src',urlToImage.width);
         $('#content').html(content);
         
         
